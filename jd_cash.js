@@ -31,15 +31,8 @@ let helpAuthor = true;
 const randomCount = $.isNode() ? 5 : 5;
 let cash_exchange = false;//是否消耗2元红包兑换200京豆，默认否
 const inviteCodes = [
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`,
-  `ZE9LHoToILlCgge9gyc@eU9YaOi0M6ki8WrWznsThQ@Yho0au-3Zf8l8WzQ@eU9Yaum3M6h1-G7QzyJA0A@eU9YDIvuL4tnqAqxsBNg@eU9YOYjUDIpSqCiBmjJG@eU9Yab-3YvslpWyAznYQ1Q`
+  `eU9YL5XqGLxSmRSAkwxR@eU9YaO7jMvwh-W_VzyUX0Q@eU9YaurkY69zoj3UniVAgg@eU9YaOnjYK4j-GvWmXIWhA@eU9YMZ_gPpRurC-foglg@eU9Ya77gZK5z-TqHn3UWhQ@eU9Yaui2ZP4gpG-Gz3EThA@eU9YaeizbvQnpG_SznIS0w`,
+  `-4msulYas0O2JsRhE-2TA5XZmBQ@eU9Yar_mb_9z92_WmXNG0w@eU9YaO7jMvwh-W_VzyUX0Q@eU9YaurkY69zoj3UniVAgg@eU9YaOnjYK4j-GvWmXIWhA@eU9YaO23bvtyozuGyHsR1A`
 ]
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
@@ -466,7 +459,7 @@ function taskUrl(functionId, body = {}) {
   }
 }
 
-function getAuthorShareCode(url = "https://raw.githubusercontent.com/Steady66666/get-code/master/jd_cash.json") {
+function getAuthorShareCode(url = "http://cdn.annnibb.me/jd_cash.json") {
   return new Promise(resolve => {
     $.get({url, headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
@@ -485,7 +478,7 @@ function getAuthorShareCode(url = "https://raw.githubusercontent.com/Steady66666
     })
   })
 }
-function getAuthorShareCode2(url = "https://raw.githubusercontent.com/Steady66666/get-code/master/jd_cash.json") {
+function getAuthorShareCode2(url = "https://cdn.jsdelivr.net/gh/gitupdate/updateTeam@master/shareCodes/jd_updateCash.json") {
   return new Promise(resolve => {
     $.get({url, headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
